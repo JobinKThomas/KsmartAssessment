@@ -1,9 +1,26 @@
 import { Formik } from "formik";
+import styled from "styled-components";
 
 const BurialTypeForm = ({ initialValues, onSubmit }) => {
+  const ModalForm = styled.div`
+    input,
+    select {
+      width: 100%;
+      margin-bottom: 10px;
+      height: 40px;
+      padding: 10px;
+    }
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 5px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  `;
   return (
-    <>
-      <h1>Add BurialType</h1>
+    <ModalForm>
       <Formik
         initialValues={initialValues}
         validate={(values) => {}}
@@ -50,7 +67,7 @@ const BurialTypeForm = ({ initialValues, onSubmit }) => {
           </form>
         )}
       </Formik>
-    </>
+    </ModalForm>
   );
 };
 

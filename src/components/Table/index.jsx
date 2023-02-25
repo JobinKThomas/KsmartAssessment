@@ -14,13 +14,29 @@ function CustomTable({ data, onClickEdit, onClickDelete }) {
     td,
     th {
       padding: 10px;
+      p {
+        padding: 10px 15px;
+        display: inline-block;
+        border-radius: 5px;
+        font-size: 12px;
+        color: white;
+        min-width: 80px;
+        text-align: center;
+      }
     }
     .icon-link {
       padding: 10px;
+
       cursor: pointer;
     }
     .icon-link:hover {
       opacity: 0.5;
+    }
+    .inactive {
+      background: grey;
+    }
+    .active {
+      background: green;
     }
   `;
   return (
@@ -37,7 +53,11 @@ function CustomTable({ data, onClickEdit, onClickDelete }) {
           {data.map((item, index) => (
             <tr>
               <td>{item.name}</td>
-              <td>{item.status}</td>
+              <td>
+                <p className={item.status === "Active" ? "active" : "inactive"}>
+                  {item.status}
+                </p>
+              </td>
               <td>
                 <a
                   onClick={() => {

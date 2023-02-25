@@ -9,6 +9,14 @@ const initialValue = [
     name: "Cremation",
     status: "Active",
   },
+  {
+    name: "Traditional",
+    status: "Active",
+  },
+  {
+    name: "Unkown",
+    status: "Inactive",
+  },
 ];
 
 const formInitialValues = { name: "", status: "" };
@@ -18,6 +26,9 @@ const BurialTypesPage = () => {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    @media only screen and (max-width: 767px) {
+      display: block;
+    }
     .title {
       font-size: 40px;
       color: Green;
@@ -28,6 +39,12 @@ const BurialTypesPage = () => {
       justify-content: space-between;
       align-items: center;
       gap: 10px;
+      @media only screen and (max-width: 767px) {
+        display: block;
+        input {
+          margin-bottom: 10px;
+        }
+      }
     }
     .button {
       background-color: #4caf50;
@@ -92,7 +109,7 @@ const BurialTypesPage = () => {
               setAddOpen(true);
             }}
           >
-            +Burial Type
+            + Burial Type
           </button>
         </div>
       </Headersection>

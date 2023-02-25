@@ -68,6 +68,10 @@ const StyledHeader = styled.header`
   color: #eee;
   padding: 10px 20px;
   box-sizing: border-box;
+  @media only screen and (max-width: 767px) {
+    display: block;
+    text-align: center;
+  }
   .headerlogo {
     width: 250px;
   }
@@ -75,6 +79,10 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media only screen and (max-width: 767px) {
+      display: block;
+      text-align: center;
+    }
   }
 `;
 
@@ -104,6 +112,7 @@ const Userinfo = styled.div`
   display: flex;
   margin-left: 20px;
   position: relative;
+
   .header__user-profile {
     display: flex;
     align-items: center;
@@ -136,4 +145,8 @@ const Userinfo = styled.div`
 const Users = styled.div`
   display: flex;
   align-items: center;
+  @media only screen and (max-width: 767px) {
+    jusyify-content: center;
+    align-items: center;
+  }
 `;

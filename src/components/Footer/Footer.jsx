@@ -26,6 +26,10 @@ const StyledFooter = styled.footer`
   background-color: #778;
   color: #fff;
   padding: 10px 20px;
+  @media only screen and (max-width: 767px) {
+    display: block;
+    text-align: center;
+  }
 `;
 
 const Link = styled.a`
@@ -40,4 +44,9 @@ const FooterButtons = styled.div`
   display: flex;
   align-items: center;
   margin-right: 20px;
+  @media only screen and (max-width: 767px) {
+    display: block;
+    text-align: center;
+    margin-right: 0;
+  }
 `;
